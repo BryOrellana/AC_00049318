@@ -30,5 +30,6 @@ division:
 	DIV BL
 	MOV [020AH], AL
 	jmp exit
+	
 exit:
 	int 20h
