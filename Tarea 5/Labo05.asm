@@ -14,7 +14,7 @@ org 100h
 
     call modotexto
 
-        primerNombre:
+        iterar:
         MOV DH, [200h+DI]
         call movercursor 
         MOV CL, [nombre+SI] 
@@ -35,7 +35,7 @@ org 100h
         CMP SI, 30
         JE esperartecla
 
-        jmp primerNombre
+        jmp iterar
 
         exit:
         int 20h
@@ -48,7 +48,7 @@ org 100h
         CmpEspacio:
         INC DI
         MOV DL,35
-        jmp primerNombre 
+        jmp iterar 
         
         modotexto: 
         MOV AH, 0h
